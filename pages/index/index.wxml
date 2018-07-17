@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="navBar">
+  <!-- 
+  class="{{category.key === activeCategory ? 'navActive' : ''}}" - 检查是不是当前分类是就加 CSS 样式
+  wx:for="{{categoryList}}" - for 渲染列表
+  wx:for-item="category" - 指定当前元素里使用数组时的变量名
+  data-category="{{category.key}}" - 数据存储，点击事件时使用
+  bindtap='onSelectCategory' - 绑定点击事件
+  wx:key='{{key}}' - 不一样的数据时才渲染
+   -->
+  <view class="{{category.key === activeCategory ? 'navActive' : ''}}" wx:for="{{categoryList}}" wx:for-item="category" data-category="{{category.key}}" bindtap='onSelectCategory' wx:key='{{key}}'>{{category.text}}</view>
+</view>
+
+<navigator class='hotNews' url='/pages/news/news?id={{nowNews[0].id}}'>
+  <image class='hotNewsImage' mode='scaleToFill' wx:if='{{nowNews[0].firstImage}}' src='{{nowNews[0].firstImage}}'></image>
+  <text class='hotNewsTitle'>{{nowNews[0].title}}</text>
+  <view class='hotnewsMore clearfix'>
+    <text class="newsSource" wx:if='{{nowNews[0].source}}'>{{nowNews[0].source}}</text>
+    <text class="newsDate">{{nowNews[0].date}}</text>
+  </view>
+</navigator>
+
+<navigator wx:for="{{nowNews}}" class="newsList" wx:key='{{id}}' wx:if='{{index > 0}}' wx:for-item="news" url='/pages/news/news?id={{news.id}}'>
+  <view class="newsDescribe">
+    <view class="newsTitle">{{news.title}}</view>
+    <view class="newsMore clearfix">
+      <text class="newsSource" wx:if="{{news.source}}">{{news.source}}</text>
+      <text class="newsDate">{{news.date}}</text>
+    </view>
+    <image class="newsImage" src='{{news.firstImage}}' wx:if="{{news.firstImage}}"></image>
+  </view>
+</navigator>

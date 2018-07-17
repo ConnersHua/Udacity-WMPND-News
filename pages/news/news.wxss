@@ -1,0 +1,23 @@
+/* pages/news/news.wxss */
+#news {
+  margin: 0 20rpx;
+}
+
+#newsTitle {
+  font-size: 48rpx;
+  margin-top: 50rpx;
+}
+
+#newsSource,
+#newsDate {
+  float: left;
+
+}
+
+#newsCount {
+  float: right
+}
+
+.textStrong {
+  font-weight: bold;
+}

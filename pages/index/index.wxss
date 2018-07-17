@@ -1,0 +1,92 @@
+/**index.wxss**/
+
+.navBar {
+  display: flex;
+  justify-content: space-around;
+  background: #3296d8;
+  padding-bottom: 10rpx;
+
+}
+.navBar > view {
+  display: flex;
+  flex-direction: column;
+  font-size: 32rpx;
+  color: #fff;
+  line-height: 56rpx;
+  border-bottom: 4rpx solid #96c7ea;
+}
+
+.navActive {
+  font-weight: bold;
+}
+
+.hotNews {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 470rpx;
+}
+
+.hotNewsImage {
+  width: 750rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.hotNewsTitle {
+  position: absolute;
+  bottom: 70rpx;
+  left: 20rpx;
+  color: #fff;
+}
+
+.hotnewsMore {
+  position: absolute;
+  bottom: 10rpx;
+  left: 20rpx;
+  color: #def;
+}
+
+.newsList {
+  padding: 15rpx;
+}
+
+.newsDescribe {
+  overflow: hidden;
+  position: relative;
+  height: 150rpx;
+  padding-bottom: 15rpx;
+  border-bottom: 3rpx solid #838387;
+}
+
+.newsMore {
+  position: absolute;
+  bottom: 15rpx;
+  left: 0;
+  font-size: 26rpx;
+  color: #838387;
+}
+
+.newsImage {
+  position: absolute;
+  width: 200rpx;
+  height: 150rpx;
+  top: 0rpx;
+  right: 0rpx;
+}
+
+.newsTitle {
+  width: 520rpx;
+  font-size: 32rpx;
+}
+
+.newsSource {
+  float: left;
+  margin-right: 15rpx;
+}
+
+.newsDate {
+  float: left;
+}

@@ -1,0 +1,14 @@
+<!--pages/news/news.wxml-->
+<view id='news'>
+  <text id='newsTitle'>{{newsContent.title}}</text>
+  <view class='clearfix'>
+    <text id='newsSource'>{{newsContent.source}}</text>
+    <text id='newsDate'>{{newsContent.date}}</text>
+    <text id='newsCount'>阅读 {{newsContent.readCount}}</text>
+  </view>
+  <view wx:for="{{newsContent.content}}" wx:key="{{id}}">
+    <image wx:if="{{item.type === 'image'}}" src="{{item.src}}" mode='aspectFill'></image>
+    <text wx:if="{{item.type === 'strong'}}" class='textStrong'>{{item.text}}</text>
+    <text wx:if="{{item.type === 'p'}}">{{item.text}}</text>
+  </view>
+</view>
